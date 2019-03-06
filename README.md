@@ -50,6 +50,7 @@ Borrar el snapshot
         |___/                   
 
 Configurar core file size
+=========================
 
 Ver el tamaño de "core file size"
 $ ulimit -c 
@@ -71,5 +72,43 @@ Detener el proceso y generar el core dump
 $ kill -3 PID
 
 
+Reiniciar PID
+=============
 
+Iniciar el proceso http
 
+# systemctl start httpd
+
+Determinar el PID de httpd
+
+# systemctl status httpd
+
+Enviar kill signal 1
+
+# kill -1 $PID
+
+Simultaneamente en otra consola revisar el archivo de log 
+
+# tail -f /var/log/error_log
+
+      _ _               _             _           
+   __| (_)_ __ ___  ___| |_ ___  _ __(_) ___  ___ 
+  / _` | | '__/ _ \/ __| __/ _ \| '__| |/ _ \/ __|
+ | (_| | | | |  __/ (__| || (_) | |  | |  __/\__ \
+  \__,_|_|_|  \___|\___|\__\___/|_|  |_|\___||___/
+  ___| |_ __ _  ___| | __                         
+ / __| __/ _` |/ __| |/ /                         
+ \__ \ || (_| | (__|   <                          
+ |___/\__\__,_|\___|_|\_\                         
+                                                  
+# pushd /var/tmp/
+# pushd /etc/sysconfig/network-scripts/
+# pushd /var/cache/
+# pushd /usr/share/doc
+
+# dirs -l
+
+# popd
+# popd
+# popd
+# popd
