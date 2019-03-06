@@ -33,3 +33,7 @@ Revertir snapshot
 Revisar de nuevo el estado de los servicios:
 
 # systemctl is-active httpd nfs-server libvirtd
+
+Borrar el snapshot
+
+# systemctl delete snapshot-1.snapshot
