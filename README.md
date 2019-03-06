@@ -37,3 +37,39 @@ Revisar de nuevo el estado de los servicios:
 Borrar el snapshot
 
 # systemctl delete snapshot-1.snapshot
+
+  _    _ _ _                    
+ | | _(_) | |                   
+ | |/ / | | |                   
+ |   <| | | |                   
+ |_|\_\_|_|_|             _     
+  ___(_) __ _ _ __   __ _| |___ 
+ / __| |/ _` | '_ \ / _` | / __|
+ \__ \ | (_| | | | | (_| | \__ \
+ |___/_|\__, |_| |_|\__,_|_|___/
+        |___/                   
+
+Configurar core file size
+
+Ver el tamaño de "core file size"
+$ ulimit -c 
+
+Configurar "core file size ilimitado"
+
+$ ulimit -c unlimited
+
+Abrir firefox
+
+$ firefox &
+
+Determinar el PID de firefox
+
+$ ps -elf | grep firefox
+
+Detener el proceso y generar el core dump
+
+$ kill -3 PID
+
+
+
+
