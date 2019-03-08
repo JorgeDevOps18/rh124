@@ -1,0 +1,13 @@
+subscription-manager register (user y pass)
+subscription-manager attach --auto
+subscription-manager repos --disable=*
+subscription-manager repos --enable=rhel-7-server-rpms
+yum update
+
+yum repolist all
+
+# Obtener el ID del repositorio
+
+# Activar el repositorio conforme el ID
+
+subscription-manager repos --enable=rhel-7-server-extras-rpms
